@@ -113,7 +113,8 @@ function osszsuly() {
     var min = 1e6;
     var max = -1e6;
     var avg;
-
+    var count = 0;
+    var db = 0;
     var tmp;
     for (var i in jsonobj) {
         if (!isNaN(jsonobj[i].mass)) {
@@ -124,6 +125,13 @@ function osszsuly() {
             if (parseFloat(jsonobj[i].mass) > max) {
                 max = jsonobj[i].mass;
             };
+            /* if (jsonobj[i].year.innerHTML.substring() == "1990") {
+                 db += 1;
+             };*/
+            if (parseFloat(jsonobj[i].mass) > 10000) {
+                count += 1;
+            };
+
         }
     }
     avg = sum / jsonobj.length;
@@ -131,6 +139,8 @@ function osszsuly() {
     document.querySelector("#osszesites").innerHTML += `<td>${min}</td>`
     document.querySelector("#osszesites").innerHTML += `<td>${max}</td>`
     document.querySelector("#osszesites").innerHTML += `<td>${avg}</td>`
+    document.querySelector("#osszesites").innerHTML += `<td>${db}</td>`
+    document.querySelector("#osszesites").innerHTML += `<td>${count}</td>`
 };
 
 
