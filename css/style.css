@@ -1,0 +1,7 @@
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgrey;
+    font-family: 'Roboto', sans-serif;
+}
